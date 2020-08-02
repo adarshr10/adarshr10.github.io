@@ -1,25 +1,130 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title> Adarsh Rao</title>
-		<meta charset="UTF-8">
-	</head>
-	<body>
-		<h1>This is Adarsh Rao's Website</h1>
-		<p title="I can even do titles!">My Amazing website that is better than Kyle's</p>
-		<section>
-			<h2>In this section you can see all the new things going on in my life.</h2>
-			<h3>Latest acitivities: </h3>
-			<article>
-				<h4>Today's daily entry</h4>
-				<p>Today was a very interesting <br> day!!</p>
-				<h5>Written by Adarsh Rao</h5>
-			</article>
-		</section>
-		<section>
-			<h2>This is another section to see BrawlStars gameplay</h2>
-			<h3>Battle log: </h3>
-			<p>Unfortunately today was all losses</p>
-			<h4>Written by Adarsh Rao</h4>
-		</section>
-	</body>
+    <head>
+        <title>Adarsh S. Rao</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&display=swap" rel="stylesheet">
+        <script type = "text/JavaScript">
+         <!--
+            function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", 100000);
+            }
+         //-->
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    </head>
+    <body onload = "JavaScript:AutoRefresh(10000000);">
+        <header id = "myHeader">
+            <nav id = "navBar">
+                <ul id = "menu">
+                    <li class = "menuItem">
+                        <a href="index.html" class = "links">Adarsh Rao</a>
+                    </li>
+                    <li class = "menuItem">
+                        <a href="#AboutID" class = "links">About</a>
+                    </li>
+                    <li class = "menuItem">
+                        <a href="#ProjectsID" id='myBtn' class = "links">Projects</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id='projectText'>Projects coming soon...</p>
+            <img class='center' src="Images/loading.gif">
+          </div>
+
+        </div>
+        <script type="text/javascript">
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+        </script>
+        <div class = "parallax" id = "home">
+            <div id = "particles-js">
+                <div id = "mainTitle">
+                    <h1 class='title'>Adarsh Rao</h1>
+                    <ul class='items'>
+                        <li>Perpetual Student</li>
+                        <li>Aspiring Maker</li>
+                        <li>Lover of Sports</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div id = "AboutID">
+                <h1 id = "aboutMe">About Me</h1>
+                <div id='desc'>
+                    <p>Hi! My name is Adarsh and I'm currently an engineering student at the University of Pennsylvania. I've loved making things since I was little, whether it be software or hardware. From Arduino, to Rube-Goldberg machines, to machine learning, I've always sought after building new things. Nothing beats the feeling of completing a successful project, and each project presents so many opportunities to learn new tools and technologies, no matter how esoteric. </p>
+                    <p>I have the same goals as any other engineer: build new things to solve complex problems. My approach is to take every opportunity as a way to not only create, but learn and grow as well.</p>
+                    <p>Outside of academics and programming, I enjoy playing sports like basketball, and am a semi-avid runner. I'm a big fan of HGTV and can spend hours looking at houses and seeing people build things. I also am a fan of youtube, with my favorite channels being 3blue1brown, pocket83, CodeBullet, and BingingWithBabish.</p>
+                    <p>If our interests align, feel free to <a href="">reach out!</a></p>
+                </div>
+                <div id='images'>
+                    <ul id='media'>
+                        <li class='social'>
+                            <a href="https://www.instagram.com/adarshr10/">
+                                <img src="Images/insta.png">
+                            </a>
+                        </li>
+                        <li class='social'>
+                            <a href="https://www.facebook.com/profile.php?id=100009990349134">
+                                <img src="Images/fb.png">
+                            </a>
+                        </li>
+                        <li class='social'>
+                            <a href="https://github.com/adarshr10">
+                                <img src="Images/git.png">
+                            </a>
+                        </li>
+                        <li class='social'>
+                            <a href="https://www.linkedin.com/in/adarsh-rao-487351157/">
+                                <img src="Images/linkedin.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            window.onscroll = function() {myFunction()};
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
+        <script type="text/javascript" src = "Javascripts/particleBackground.js"></script>
+    </body>
 </html>
